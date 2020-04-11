@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>QueuingSystem.Abstractions</AssemblyName>
+    <RootNamespace>QueuingSystem.Abstractions</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QueuingSystem.Models\QueuingSystem.Models.csproj" />
+  </ItemGroup>
+
+</Project>

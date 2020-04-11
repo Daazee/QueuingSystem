@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QueuingSystem.DAL\QueuingSystem.DAL.csproj" />
+    <ProjectReference Include="..\QueuingSystem.Interfaces\QueuingSystem.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
