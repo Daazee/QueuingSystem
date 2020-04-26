@@ -9,6 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
@@ -17,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueuingSystem.DAL\QueuingSystem.DAL.csproj" />
+    <ProjectReference Include="..\QueuingSystem.Models\QueuingSystem.Models.csproj" />
     <ProjectReference Include="..\QueuingSystem.Service\QueuingSystem.Service.csproj" />
   </ItemGroup>
 
