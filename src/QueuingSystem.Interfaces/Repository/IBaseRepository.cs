@@ -7,10 +7,10 @@ namespace QueuingSystem.Abstractions.Repository
 {
     public interface IBaseRepository<T> where T : class
     {
-        Task<T> GetItem(int id);
+        Task<T> GetItem(Guid id);
         Task<IEnumerable<T>> GetItems();
-        Task<int> AddItem(T item);
-        Task<int> UpdateItem(T item);
+        Task<T> AddItem(T item);
+        Task<T> UpdateItem(T item);
         Task<T> RemoveItem(int id);
     }
 }

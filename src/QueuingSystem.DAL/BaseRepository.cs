@@ -11,7 +11,7 @@ namespace QueuingSystem.DAL
     {
         QueuingSystemContext context = ContextManager.GetContext();
 
-        public async Task<T> GetItem(int id)
+        public async Task<T> GetItem(Guid id)
         {
             var model = await context.Set<T>().FindAsync(id);
             return model;
@@ -25,17 +25,19 @@ namespace QueuingSystem.DAL
         }
 
 
-        public async Task<int> AddItem(T item)
+        public async Task<T> AddItem(T item)
         {
             context.Set<T>().Add(item);
-            return await context.SaveChangesAsync();
+            await context.SaveChangesAsync();
+            return item;
         }
 
         // updates an entity in a set
-        public async Task<int> UpdateItem(T item)
+        public async Task<T> UpdateItem(T item)
         {
             context.Entry<T>(item).State = EntityState.Modified;
-            return await context.SaveChangesAsync();
+            await context.SaveChangesAsync();
+            return item;
         }
 
         // removes an entity in a set
