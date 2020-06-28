@@ -72,6 +72,7 @@ namespace QueuingSystem.API.Controllers
             {
                 var queues = await _queuesService.GetTodaysQueuesBySatus(status);
                 var queuesDTO = _mapper.Map<IEnumerable<Queues>, IEnumerable<QueuesDTO>>(queues);
+                Request.HttpContext.Response.Headers.Add("X-TotalCounts", queuesDTO.Count().ToString());//added information to the response header
                 return Ok(queuesDTO);
             }
             return BadRequest();
